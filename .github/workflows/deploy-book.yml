@@ -705,14 +705,14 @@ jobs:
         # echo "$HTML_TEMPLATE_404_TRUE" > final/404-not-found.html
         echo "$HTML_TEMPLATE_404_REDIRECT" | envsubst | tee final/404.html
 
-    - name: Upload final Pages artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: "final/"
+    # - name: Upload final Pages artifact
+    #   uses: actions/upload-pages-artifact@v3
+    #   with:
+    #     path: "final/"
 
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+    # - name: Deploy to GitHub Pages
+    #   id: deployment
+    #   uses: actions/deploy-pages@v4
 
     - name: Upload summary as artifact
       uses: actions/upload-artifact@v4
